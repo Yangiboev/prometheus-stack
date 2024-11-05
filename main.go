@@ -68,5 +68,5 @@ func main() {
 	// Start HTTP server
 	slog.Info("Starting server on port 8080")
 	http.Handle("/metrics", promhttp.Handler())
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe("0.0.0.0:8080", nil)
 }
