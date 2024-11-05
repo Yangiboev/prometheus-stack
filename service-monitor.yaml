@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: custom-exporter
-        image: ttl.sh/exporter-demo:1h
+        image: docker.io/dellicon/test:latest 
         ports:
         - name: web
           containerPort: 8080
