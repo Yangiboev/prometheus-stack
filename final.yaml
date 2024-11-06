@@ -1,0 +1,21 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  annotations:
+    meta.helm.sh/release-name: stable
+    meta.helm.sh/release-namespace: prometheus
+  creationTimestamp: "2024-11-05T21:09:59Z"
+  generation: 1
+  labels:
+    app: custom-exporter
+    release: stable
+  name: custom-exporter
+  namespace: prometheus
+spec:
+  endpoints:
+  - interval: 15s
+    path: /metrics
+    port: web
+  selector:
+    matchLabels:
+      app: custom-exporter
